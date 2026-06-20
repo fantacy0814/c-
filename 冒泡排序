@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    int a[6]={70,57,99,63,49,77};
+    for(int i=0;i<sizeof(a)/sizeof(a[0]);i++){
+        for(int j=0;j<sizeof(a)/sizeof(a[0])-1;j++){
+            if(a[j]>a[j+1]){
+                int temp=a[j+1];
+                a[j+1]=a[j];
+                a[j]=temp;
+        }
+    }
+}
+    for(int i=0;i<sizeof(a)/sizeof(a[0]);i++){
+        printf("%d ",a[i]);
+    }
+}
